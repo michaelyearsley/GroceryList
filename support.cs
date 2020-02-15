@@ -11,11 +11,6 @@ namespace GroceryList
             System.Console.Write(question);
             return System.Console.ReadLine();
         }
-        class GroceryList
-        {
-            public string Item;
-            public double Price;
-            public string Store;
-        }
+        
     }
 }

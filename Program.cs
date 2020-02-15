@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GroceryList
 {
@@ -7,10 +8,14 @@ namespace GroceryList
     {
         static void Main(string[] args)
         {
+            //System.Collections.Generic 1
             var grocerylist = new List<GroceryList>();
 
 
+
+            // system 1
             bool adding = true;
+            // system 2
             while (adding)
             {
                 var newGroceryList = new GroceryList();
@@ -22,17 +27,21 @@ namespace GroceryList
                 newGroceryList.Store = support.Ask("Enter store: ");
 
                 grocerylist.Add(newGroceryList);
+                
 
                 adding = "n" != support.Ask("do you want to enter anot item (y/n)? ");
 
             }
 
+            //System.Linq 1
+            grocerylist = grocerylist.OrderBy(x => x.Item).ToList();
+            //system 3
             foreach (var grocery in grocerylist)
             {
                 Console.WriteLine("Item: {0} Price:{1} Store: {2}", grocery.Item, grocery.Price, grocery.Store);
-                Console.ReadLine();
+                
             }
-
+            Console.ReadLine();
         }
     }
     class GroceryList
