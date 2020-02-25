@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GroceryList
 {
@@ -11,6 +9,6 @@ namespace GroceryList
             System.Console.Write(question);
             return System.Console.ReadLine();
         }
-        
+
     }
 }
